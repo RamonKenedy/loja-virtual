@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<title>Loja Virtual</title>
+
+	<link rel="stylesheet" type="text/css" href="stylesheets/vendors.min.css"/>
+	<link rel="stylesheet" type="text/css" href="stylesheets/algaworks.min.css"/>
+	<link rel="stylesheet" type="text/css" href="stylesheets/application.css"/>
+
+</head>
+<body>
+
+<div class="aw-layout-page">
+
+	<nav class="navbar  navbar-fixed-top  navbar-default  js-sticky-reference" id="main-navbar">
+	  <div class="container-fluid">
+
+	    <div class="navbar-header">
+
+	      <ul class="nav  navbar-nav">
+	        <li>
+	          <a href="#" class="js-sidebar-toggle"><i class="fa  fa-bars"></i></a>
+	        </li>
+	      </ul>
+	    </div>
+
+
+	  </div>
+	</nav>
+
+	<aside class="aw-layout-sidebar  js-sidebar">
+		<div class="aw-layout-sidebar__content">
+
+    <nav class="aw-menu  js-menu">
+      <ul class="aw-menu__list">
+        <li class="aw-menu__item  is-active">
+          <a href="#">
+            <i class="fa  fa-fw  fa-file-text"></i><span>Cadastros</span>
+            <i class="aw-menu__navigation-icon  fa"></i>
+          </a>
+      
+          <ul class="aw-menu__list  aw-menu__list--sublist">
+            <li class="aw-menu__item  aw-menu__item--link"><a href="cadastro-usuario.html">Cadastro de usuário</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </nav>
+
+		</div>
+	</aside>
+
+	<section class="aw-layout-content  js-content">
+
+
+<div class="page-header">
+	<div class="container-fluid">
+		<h1>
+			Cadastro de usuário
+		</h1>
+	</div>
+</div>
+
+<div class="container-fluid">
+
+	<form class="form-vertical  js-form-loading">
+		
+		<div class="form-group">
+			<label for="input-produto-nome">Nome</label>
+			<input id="input-produto-nome" type="text" class="form-control"/>
+		</div>
+		
+		
+		<div class="row">
+			<div class="form-group col-sm-4">
+				<label for="cpfOuCnpj" class="control-label">CPF/CNPJ</label>
+				<input type="text" class="form-control"  id="cpfOuCnpj" />
+			</div>
+			<div class="form-group  col-sm-4">
+				<label for="telefone">Telefone</label>
+				<input type="text" class="form-control  js-phone-number" id="telefone" />
+			</div>
+				
+			<div class="form-group  col-sm-4" >
+				<label for="email" class="control-label">E-mail</label>
+				<input type="text" class="form-control" id="email" />
+			</div>
+		</div>
+			
+			<div class="row">
+				<div class="form-group col-sm-12">
+					<label for="logradouro">Logradouro</label>
+					<input type="text" class="form-control" id="logradouro" />
+				</div>
+				
+				<div class="form-group  col-sm-4">
+					<label for="numero">Número</label>
+					<input type="text" class="form-control" id="numero" />
+				</div>
+				
+				<div class="form-group  col-sm-4">
+					<label for="complemento">Complemento</label>
+					<input type="text" class="form-control" id="complemento" />
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="form-group  col-sm-4">
+					<label for="cep">CEP</label>
+					<input type="text" class="form-control  js-cep" id="cep" />
+				</div>
+				
+				<div class="form-group  col-sm-4">
+					<label for="estado">Estado</label>
+					<input type="text" class="form-control" id="estado" />
+				</div>
+				
+				<div class="form-group  col-sm-4">
+					<label  for="cidade">Cidade</label>
+					<input type="text" class="form-control" id="cidade" />
+				</div>
+			</div>
+		
+		<div class="form-group">
+			<button class="btn  btn-primary" type="submit">Salvar</button>
+			<a href="login.html" class="btn  btn-default">Cancelar</a>
+			<a href="#" class="btn  btn-link  aw-btn-link-danger" onclick="excluir()">Excluir este usuário</a>
+		</div>
+
+	</form>
+</div>
+
+
+	</section>
+	
+	<footer class="aw-layout-footer  js-content">
+		<div class="container-fluid">
+			<span class="aw-footer-disclaimer">&copy; 2017 IFG - Loja Virtual. Todos os direitos reservados.</span>
+		</div>
+	</footer>
+
+</div>
+
+<script src="javascripts/vendors.min.js"></script>
+<script src="javascripts/algaworks.min.js"></script>
+
+</body>
+</html>
