@@ -7,17 +7,19 @@ public class Cliente {
 	private String email;
 	private String telefone;
 	private Endereco endereco;
+	private String senha;
 
 	public Cliente() {
 
 	}
 
-	public Cliente(String nome, String cpf, String email, String telefone, Endereco endereco) {
+	public Cliente(String nome, String cpf, String email, String telefone, Endereco endereco, String senha) {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.email = email;
 		this.telefone = telefone;
 		this.endereco = endereco;
+		this.senha = senha;
 	}
 
 	public Long getId() {
@@ -66,6 +68,14 @@ public class Cliente {
 
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 
 	@Override

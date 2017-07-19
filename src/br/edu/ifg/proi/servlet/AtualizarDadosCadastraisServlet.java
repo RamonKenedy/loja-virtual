@@ -1,6 +1,7 @@
 package br.edu.ifg.proi.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,11 +14,20 @@ import br.edu.ifg.proi.dao.EnderecoDao;
 import br.edu.ifg.proi.model.Cliente;
 import br.edu.ifg.proi.model.Endereco;
 
-@WebServlet("/manutencaoCliente")
-public class ManutencaoClienteServlet extends HttpServlet {
+@WebServlet("/manutencaoCliente2")
+public class AtualizarDadosCadastraisServlet extends HttpServlet {
 
+	public void init() throws ServletException {
+		
+		     getServletContext().setAttribute("nome", "Ramon");
+		
+		    }
+
+	
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
+
+		PrintWriter out = response.getWriter();
 
 		// pegando os par�metros do request
 		String nome = request.getParameter("nome");
@@ -58,6 +68,10 @@ public class ManutencaoClienteServlet extends HttpServlet {
 		dao.adiciona(cliente, idEndereco);
 
 		// imprime o nome do Cliente que foi adicionado
-		response.sendRedirect("sucesso-inclusao-cliente.html");
+		out.println("<html>");
+		out.println("<body>");
+		out.println("Cliente " + cliente.getNome() + " adicionado com sucesso");
+		out.println("</body>");
+		out.println("</html>");
 	}
 }

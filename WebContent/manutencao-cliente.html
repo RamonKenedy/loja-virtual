@@ -44,7 +44,7 @@
           </a>
       
           <ul class="aw-menu__list  aw-menu__list--sublist">
-            <li class="aw-menu__item  aw-menu__item--link"><a href="manutencao-cliente.html">Cadastro de usuário</a></li>
+            <li class="aw-menu__item  aw-menu__item--link"><a href="manutencao-cliente.html">Cadastro de cliente</a></li>
           </ul>
         </li>
 
@@ -60,7 +60,7 @@
 <div class="page-header">
 	<div class="container-fluid">
 		<h1>
-			Cadastro de usuário
+			Cadastro de cliente
 		</h1>
 	</div>
 </div>
@@ -71,7 +71,7 @@
 		
 		<div class="form-group">
 			<label for="input-produto-nome">Nome</label>
-			<input id="input-produto-nome" type="text" class="form-control" name="nome"/>
+			<input id="input-produto-nome" type="text" class="form-control" name="nome" />
 		</div>
 		
 		<div class="row">
@@ -84,12 +84,20 @@
 				<input type="text" class="form-control  js-phone-number" id="telefone" name="telefone"/>
 			</div>
 				
-			<div class="form-group  col-sm-4" >
-				<label for="email" class="control-label">E-mail</label>
-				<input type="text" class="form-control" id="email" name="email"/>
-			</div>
-		</div>
 			
+		</div>
+		
+			<div class="row">
+				<div class="form-group  col-sm-4" >
+					<label for="email" class="control-label">E-mail</label>
+					<input type="text" class="form-control" id="email" name="email"/>
+				</div>
+				<div class="form-group  col-sm-4">
+					<label for="complemento">Senha</label>
+					<input type="password" class="form-control" id="senha" name="senha"/>
+				</div>
+			</div>
+				
 			<div class="row">
 				<div class="form-group col-sm-12">
 					<label for="logradouro">Logradouro</label>
@@ -127,7 +135,6 @@
 		<div class="form-group">
 			<button class="btn  btn-primary" type="submit" >Salvar</button>
 			<a href="login.html" class="btn  btn-default">Cancelar</a>
-			<a href="#" class="btn  btn-link  aw-btn-link-danger" onclick="excluir()">Excluir este usuário</a>
 		</div>
 
 	</form>
