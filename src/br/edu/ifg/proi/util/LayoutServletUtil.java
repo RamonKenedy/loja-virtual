@@ -34,22 +34,31 @@ public class LayoutServletUtil {
 		out.println("</nav>");
 
 		out.println("<aside class=\"aw-layout-sidebar  js-sidebar\">");
-		out.println("<div class=\"aw-layout-sidebar__content\"> ");
-		out.println("<nav class=\"aw-menu  js-menu\"> ");
-		out.println("<ul class=\"aw-menu__list\"> ");
-		out.println("<li class=\"aw-menu__item  is-active\"> ");
-		out.println("<a href=\"#\"> ");
-		out.println("<i class=\"fa  fa-fw  fa-file-text\"></i><span>Cadastros</span> ");
+		out.println("<div class=\"aw-layout-sidebar__content\">");
+
+		out.println("<nav class=\"aw-menu  js-menu\">");
+		out.println("<ul class=\"aw-menu__list\">");
+		out.println("<li class=\"aw-menu__item  is-active\">");
+		out.println("<a href=\"#\">");
+		out.println("<i class=\"fa  fa-fw  fa-file-text\"></i><span>Cadastros</span>");
+		out.println("<i class=\"aw-menu__navigation-icon  fa\"></i>");
 		out.println("</a>");
+
 		out.println("<ul class=\"aw-menu__list  aw-menu__list--sublist\">");
 		out.println(
 				"<li class=\"aw-menu__item  aw-menu__item--link\"><a href=\"manutencao-cliente.html\">Cadastro de cliente</a></li>");
-		out.println("</ul> ");
-		out.println("</li> ");
-		out.println("</ul> ");
+		out.println("</ul>");
+		out.println("<ul class=\"aw-menu__list  aw-menu__list--sublist\">");
+		out.println(
+				"<li class=\"aw-menu__item  aw-menu__item--link\"><a href=\"Produtos\">Cadastro de produtos</a></li>");
+		out.println("</ul>");
+		out.println("</li>");
+
+		out.println("</ul>");
 		out.println("</nav>");
+
 		out.println("</div>");
-		out.println("</aside> ");
+		out.println("</aside>");
 
 		return out;
 

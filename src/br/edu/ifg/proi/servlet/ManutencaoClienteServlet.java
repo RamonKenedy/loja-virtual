@@ -57,7 +57,7 @@ public class ManutencaoClienteServlet extends HttpServlet {
 		ClienteDao dao = new ClienteDao();
 		dao.adiciona(cliente, idEndereco);
 
-		// imprime o nome do Cliente que foi adicionado
+		// direciona pra pagina de sucesso
 		response.sendRedirect("sucesso-inclusao-cliente.html");
 	}
 }

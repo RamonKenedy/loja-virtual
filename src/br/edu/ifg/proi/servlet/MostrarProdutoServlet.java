@@ -70,9 +70,9 @@ public class MostrarProdutoServlet extends HttpServlet {
 		out.println("</tr>");
 		out.println("</tbody>");
 		out.println("</table>");
-		out.println("<a href = \"http://localhost:8080/loja-virtual/IncluirProduto.html\">Incluir</a>");
-		out.println("<a href = \"http://localhost:8080/loja-virtual/AlterarProduto.html\">Alterar</a>");
-		out.println("<a href = \"http://localhost:8080/loja-virtual/ExcluirProduto.html\">Excluir</a>");
+		out.println("<a href = \"incluir-produto.html\">Incluir</a>");
+		out.println("<a href = \"buscar-produto.html\">Alterar</a>");
+		out.println("<a href = \"excluir-produto.html\">Excluir</a>");
 
 		out.println("</div>");
 		out.println("</form>");

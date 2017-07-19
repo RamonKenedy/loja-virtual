@@ -32,38 +32,31 @@
 	  </div>
 	</nav>
 
-
 	<section class="aw-layout-content  js-content">
 
 
 <div class="page-header">
 	<div class="container-fluid">
 		<h1>
-			Informe o seu CPF:
+			Cadastro de cliente
 		</h1>
 	</div>
 </div>
 
 <div class="container-fluid">
+	<div class="alert  alert-success  alert-dismissible" role="alert">
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<i class="fa  fa-check"></i> Cliente alterado com sucesso!
+	</div>
 
-	<form action="alterar-cliente" method = "POST" class="form-vertical  js-form-loading">
-		
-		<div class="row">
-			<div class="form-group col-sm-4">
-				<label for="cpfBusca" class="control-label">CPF</label>
-				<input type="text" class="form-control"  id="cpfBusca" name="cpfBusca" />
-			</div>
-			
-		</div>
+	<form action="home.html" class="form-vertical  js-form-loading">
 		
 		<div class="form-group">
-			<button class="btn  btn-primary" type="submit" id = "alterar" name = "alterar">Alterar</button>
-			<a href="home.html" class="btn  btn-link  aw-btn-link-danger">Voltar</a>
+			<button class="btn  btn-primary" type="submit" >Voltar</button>
+			
 		</div>
 
 	</form>
-	
-	
 </div>
 
 
@@ -76,3 +69,9 @@
 	</footer>
 
 </div>
+
+<script src="javascripts/vendors.min.js"></script>
+<script src="javascripts/algaworks.min.js"></script>
+
+</body>
+</html>

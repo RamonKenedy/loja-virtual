@@ -81,7 +81,7 @@ public class ProdutoDao {
 	}
 
 	public Produto consultaProdutoId(Long id) {
-		Produto retorno = new Produto();
+		Produto produto = null;
 		try {
 
 			String sql = "Select * FROM Produto WHERE id = ? ;";
@@ -93,19 +93,20 @@ public class ProdutoDao {
 			ResultSet rs = stmt.executeQuery();
 
 			if (rs.next()) {
-				retorno.setId(rs.getLong("id"));
-				retorno.setDescricao(rs.getString("descricao"));
-				retorno.setMarca(rs.getString("marca"));
-				retorno.setPreco_unit(rs.getDouble("preco_unit"));
-				retorno.setFornecedor(rs.getString("fornecedor"));
-				retorno.setQtd_estoque(rs.getInt("qtd_estoque"));
+				produto = new Produto();
+				produto.setId(rs.getLong("id"));
+				produto.setDescricao(rs.getString("descricao"));
+				produto.setMarca(rs.getString("marca"));
+				produto.setPreco_unit(rs.getDouble("preco_unit"));
+				produto.setFornecedor(rs.getString("fornecedor"));
+				produto.setQtd_estoque(rs.getInt("qtd_estoque"));
 			}
 
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
 
-		return retorno;
+		return produto;
 
 	}
 

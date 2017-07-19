@@ -66,7 +66,7 @@ public class ClienteDao {
 
 	public void alterar(Cliente cliente) {
 		try {
-			String sql = "UPDATE CLIENTE SET nome = ?, cpf = ?, email = ?," + "telefone = ? WHERE cpf = ?;";
+			String sql = "UPDATE CLIENTE SET nome = ?, cpf = ?, email = ?, telefone = ?, senha = ? WHERE id = ?;";
 
 			PreparedStatement stmt = connection.prepareStatement(sql);
 
@@ -74,7 +74,8 @@ public class ClienteDao {
 			stmt.setString(2, cliente.getCpf());
 			stmt.setString(3, cliente.getEmail());
 			stmt.setString(4, cliente.getTelefone());
-			stmt.setString(5, cliente.getCpf());
+			stmt.setString(5, cliente.getSenha());
+			stmt.setLong(6, cliente.getId());
 
 			stmt.execute();
 			stmt.close();
@@ -109,7 +110,7 @@ public class ClienteDao {
 
 			ResultSet rs = stmt.executeQuery();
 
-			if (rs.next()) {
+			while (rs.next()) {
 				passwordMap.put(rs.getString("email"), rs.getString("senha"));
 			}
 			stmt.execute();

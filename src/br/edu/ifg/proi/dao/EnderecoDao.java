@@ -91,7 +91,7 @@ public class EnderecoDao {
 		int last_inserted_id = 0;
 		try {
 			String sql = "UPDATE ENDERECO SET logradouro = ?, numero = ?, complemento = ?,"
-					+ "cep = ?, estado = ?,cidade = ? WHERE complemento = ? ;";
+					+ "cep = ?, estado = ?,cidade = ? WHERE id = ? ;";
 
 			PreparedStatement stmt = connection.prepareStatement(sql);
 
@@ -101,7 +101,7 @@ public class EnderecoDao {
 			stmt.setString(4, endereco.getCep());
 			stmt.setString(5, endereco.getEstado());
 			stmt.setString(6, endereco.getCidade());
-			stmt.setString(7, endereco.getComplemento());
+			stmt.setLong(7, endereco.getId());
 
 			stmt.execute();
 			stmt.close();
