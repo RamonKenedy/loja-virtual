@@ -20,7 +20,7 @@ public class MostrarProdutoServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
-	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+	public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
@@ -73,7 +73,8 @@ public class MostrarProdutoServlet extends HttpServlet {
 		out.println("<a href = \"incluir-produto.html\">Incluir</a>");
 		out.println("<a href = \"buscar-produto.html\">Alterar</a>");
 		out.println("<a href = \"excluir-produto.html\">Excluir</a>");
-
+		out.println("<p></p>");
+		out.println("<a href=\"home.html\" class=\"btn  btn-default\">Voltar</a>");
 		out.println("</div>");
 		out.println("</form>");
 		out.println("</section> ");

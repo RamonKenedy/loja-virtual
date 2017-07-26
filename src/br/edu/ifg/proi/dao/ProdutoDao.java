@@ -147,4 +147,29 @@ public class ProdutoDao {
 			throw new RuntimeException(e);
 		}
 	}
+	
+public List<Produto>BaixarEstoque(List<Produto> listaCompra){
+		
+		try {
+			String sql = "UPDATE produto set qtd_estoque = qtd_estoque - ? "
+					+ "WHERE ID = ?;";
+			
+			PreparedStatement stmt = connection.prepareStatement(sql);
+			
+			for (Produto p : listaCompra) {
+				stmt.setDouble(1, p.getQtd_estoque());
+				stmt.setLong(2, p.getId());
+				stmt.execute();
+			}
+			
+			stmt.close();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		return listaCompra;
+      
+	}
+	
 }

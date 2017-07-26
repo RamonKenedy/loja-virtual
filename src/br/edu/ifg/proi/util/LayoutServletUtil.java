@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 
 public class LayoutServletUtil {
 
-	public static PrintWriter getCabecalhoLayout(PrintWriter out) {
+	public static void getCabecalhoLayout(PrintWriter out) {
 		out.println("<!DOCTYPE html>");
 		out.println("<html lang= \"pt\">");
 		out.println("<head>");
@@ -60,11 +60,9 @@ public class LayoutServletUtil {
 		out.println("</div>");
 		out.println("</aside>");
 
-		return out;
-
 	}
 
-	public static PrintWriter getRodapeLayout(PrintWriter out) {
+	public static void getRodapeLayout(PrintWriter out) {
 
 		out.println("<footer class=\"aw-layout-footer  js-content\"> ");
 		out.println("<div class=\"container-fluid\"> ");
@@ -80,8 +78,6 @@ public class LayoutServletUtil {
 		out.println("</body>");
 		out.println("</html>");
 
-		return out;
-
-	}
+}
 
 }

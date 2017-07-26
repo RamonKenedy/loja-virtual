@@ -147,7 +147,7 @@ public class AlterarClienteServlet extends HttpServlet {
 			String telefone = request.getParameter("telefone");
 			// endereco
 			String logradouro = request.getParameter("logradouro");
-			int numero = Integer.valueOf(request.getParameter("numero"));
+			int numero =  Integer.valueOf(request.getParameter("numero"));
 			String complemento = request.getParameter("complemento");
 			String cep = request.getParameter("cep");
 			String estado = request.getParameter("estado");

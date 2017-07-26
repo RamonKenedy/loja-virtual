@@ -1,7 +1,6 @@
 package br.edu.ifg.proi.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,7 +19,6 @@ public class CheckLoginServlet extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		PrintWriter out = response.getWriter();
 
 		// Preenche o mapa de senhas
 		ClienteDao dao = new ClienteDao();
